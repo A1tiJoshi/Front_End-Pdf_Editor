@@ -6,31 +6,6 @@
     <title>PDF Tools Landing Page</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.suprsend.com/sdk.js"></script>
-    <script>
-        // Initialize SuprSend with environment variables
-        window.onload = function() {
-            // Ensure this code runs after the page loads
-            if (typeof window.suprsend !== 'undefined') {
-                try {
-            window.suprsend.init({
-                apiKey: process.env.SUPRSEND_WORKSPACE_KEY, 
-                apiSecret: process.env.UPRSEND_WORKSPACE_SECRET,  // Use the environment variable
-                environment: 'production'  // Set to 'development' or 'preview' as needed
-            });
-
-            // Render SuprSend inbox
-            window.suprsend.renderInbox({
-                container: '#suprsend-inbox'  // Ensure you have an element with this ID
-            });
-        } catch (error) {
-            console.error('Error initializing SuprSend:', error);
-        }
-    } else {
-        console.error('SuprSend SDK is not loaded.');
-    }
-
-        };
-    </script>
 </head>
 <body>
     <header>
@@ -66,7 +41,6 @@
                 <h3>PDF Merger</h3>
                 <p>Merge multiple PDFs into one.</p>
             </div>
-            
         </section>
         <section id="testimonials">
             <h2>What Our Users Say</h2>
@@ -74,7 +48,6 @@
                 <p>"This tool is a lifesaver!"</p>
                 <p>- John Doe</p>
             </div>
-            
         </section>
         <section id="pricing">
             <h2>Pricing Plans</h2>
@@ -89,8 +62,11 @@
                     <td>Free</td>
                     <td>Limited features</td>
                 </tr>
-              
             </table>
+        </section>
+        <section id="suprsend-inbox">
+            <!-- SuprSend inbox will be rendered here -->
+            <div id="suprsend-inbox"></div>
         </section>
     </main>
     <footer>
@@ -103,7 +79,6 @@
         <div class="social-media">
             <a href="#"><i class="icon">🌐</i></a>
             <a href="#"><i class="icon">🐦</i></a>
-          
         </div>
         <div class="contact-info">
             <p>Email: avanti@gmail.com</p>
@@ -111,7 +86,5 @@
         </div>
     </footer>
     <script src="scripts.js"></script>
-    <!-- Add the SuprSend inbox container here -->
-    <div id="suprsend-inbox"></div>
 </body>
 </html>
