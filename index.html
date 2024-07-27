@@ -10,6 +10,8 @@
         // Initialize SuprSend with environment variables
         window.onload = function() {
             // Ensure this code runs after the page loads
+            if (typeof window.suprsend !== 'undefined') {
+                try {
             window.suprsend.init({
                 apiKey: process.env.SUPRSEND_WORKSPACE_KEY, 
                 apiSecret: process.env.UPRSEND_WORKSPACE_SECRET,  // Use the environment variable
@@ -20,6 +22,13 @@
             window.suprsend.renderInbox({
                 container: '#suprsend-inbox'  // Ensure you have an element with this ID
             });
+        } catch (error) {
+            console.error('Error initializing SuprSend:', error);
+        }
+    } else {
+        console.error('SuprSend SDK is not loaded.');
+    }
+
         };
     </script>
 </head>
