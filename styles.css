@@ -1,0 +1,160 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.cta-buttons .btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+#hero {
+    padding: 100px 20px;
+    text-align: center;
+    background: #eaeaea;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#hero .btn {
+    padding: 15px 30px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Features Section */
+#features {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#features h2 {
+    margin-bottom: 30px;
+}
+
+.feature {
+    display: inline-block;
+    width: 45%;
+    margin: 2.5%;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.feature .icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 50px 20px;
+    background: #eaeaea;
+    text-align: center;
+}
+
+#testimonials h2 {
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    display: inline-block;
+    width: 45%;
+    margin: 2.5%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Pricing Section */
+#pricing {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#pricing h2 {
+    margin-bottom: 30px;
+}
+
+#pricing table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+#pricing table th, #pricing table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#pricing table th {
+    background: #f4f4f4;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-links a, .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
