@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Tools Landing Page</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.suprsend.com/sdk.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@suprsend/web-sdk"></script>
+    <script src="./config.js"></script>
 </head>
 <body>
     <header>
@@ -41,6 +42,7 @@
                 <h3>PDF Merger</h3>
                 <p>Merge multiple PDFs into one.</p>
             </div>
+            <!-- Add more features as needed -->
         </section>
         <section id="testimonials">
             <h2>What Our Users Say</h2>
@@ -48,6 +50,7 @@
                 <p>"This tool is a lifesaver!"</p>
                 <p>- John Doe</p>
             </div>
+            <!-- Add more testimonials as needed -->
         </section>
         <section id="pricing">
             <h2>Pricing Plans</h2>
@@ -62,10 +65,11 @@
                     <td>Free</td>
                     <td>Limited features</td>
                 </tr>
+                <!-- Add more pricing plans as needed -->
             </table>
         </section>
-        <section id="suprsend-inbox">
-            <!-- SuprSend inbox will be rendered here -->
+        <section id="inbox">
+            <h2>Notification Inbox</h2>
             <div id="suprsend-inbox"></div>
         </section>
     </main>
@@ -79,12 +83,27 @@
         <div class="social-media">
             <a href="#"><i class="icon">🌐</i></a>
             <a href="#"><i class="icon">🐦</i></a>
+            <!-- Add more social media icons as needed -->
         </div>
         <div class="contact-info">
-            <p>Email: avanti@gmail.com</p>
-            <p>Phone: +012 345 6789</p>
+            <p>Email: support@pdftools.com</p>
+            <p>Phone: +123 456 7890</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const suprsendConfig = window.suprsendConfig;
+
+            Suprsend.init({
+                workspace_key: suprsendConfig.workspace_key,
+                workspace_secret: suprsendConfig.workspace_secret,
+                user_id: suprsendConfig.user_id,
+                environment: suprsendConfig.env
+            });
+
+            Suprsend.inbox.render(document.getElementById('suprsend-inbox'));
+        });
+    </script>
     <script src="scripts.js"></script>
 </body>
 </html>
