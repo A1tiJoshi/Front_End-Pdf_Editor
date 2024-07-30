@@ -141,6 +141,51 @@ nav ul li a {
     background: #f4f4f4;
 }
 
+/* Notification Inbox Section */
+#inbox {
+    padding: 50px 20px;
+    text-align: center;
+    background: #918a98; /* Light blue background for inbox */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#inbox h2 {
+    margin-bottom: 20px;
+    color: #00796b; /* Teal color for heading */
+}
+
+.inbox-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inbox-container .notification {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+.inbox-container .notification:last-child {
+    border-bottom: none;
+}
+
+.notification-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.notification-message {
+    color: #555;
+}
+
 /* Footer */
 footer {
     padding: 20px;
